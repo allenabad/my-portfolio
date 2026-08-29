@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 380" width="180" height="380">
+  <!-- Placeholder app screenshot 02 — replace with a real screenshot -->
+  <defs>
+    <pattern id="ht-s2" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#0a0a0a"/>
+    </pattern>
+    <linearGradient id="fade-s2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.8" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="mfade-s2">
+      <rect width="180" height="380" fill="url(#fade-s2)"/>
+    </mask>
+  </defs>
+  <rect width="180" height="380" rx="20" fill="#f5f4f2"/>
+  <rect x="0.5" y="0.5" width="179" height="379" rx="19.5" fill="none" stroke="#e7e5e2"/>
+
+  <!-- top header -->
+  <rect x="20" y="24" width="40" height="6" rx="3" fill="#171717"/>
+  <rect x="20" y="38" width="100" height="4" rx="2" fill="#a3a3a3"/>
+
+  <!-- chart / big block -->
+  <rect x="20" y="64" width="140" height="90" rx="10" fill="#ffffff" stroke="#e7e5e2"/>
+  <rect x="32" y="130" width="10" height="14" fill="#7c3aed"/>
+  <rect x="48" y="118" width="10" height="26" fill="#7c3aed"/>
+  <rect x="64" y="100" width="10" height="44" fill="#7c3aed"/>
+  <rect x="80" y="112" width="10" height="32" fill="#a78bfa"/>
+  <rect x="96" y="92" width="10" height="52" fill="#7c3aed"/>
+  <rect x="112" y="120" width="10" height="24" fill="#a78bfa"/>
+  <rect x="128" y="108" width="10" height="36" fill="#7c3aed"/>
+
+  <!-- stat tiles -->
+  <rect x="20" y="170" width="66" height="50" rx="8" fill="#ffffff" stroke="#e7e5e2"/>
+  <rect x="94" y="170" width="66" height="50" rx="8" fill="#ffffff" stroke="#e7e5e2"/>
+  <rect x="20" y="230" width="66" height="50" rx="8" fill="#ffffff" stroke="#e7e5e2"/>
+  <rect x="94" y="230" width="66" height="50" rx="8" fill="#ffffff" stroke="#e7e5e2"/>
+
+  <!-- halftone fade -->
+  <g mask="url(#mfade-s2)">
+    <rect x="60" y="220" width="160" height="200" rx="40" fill="url(#ht-s2)" opacity="0.12"/>
+  </g>
+
+  <text x="20" y="362" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#a3a3a3" letter-spacing="1.5">SCREENSHOT · 02</text>
+</svg>

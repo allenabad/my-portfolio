@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <!-- Placeholder app icon 01 — replace with a real project icon -->
+  <defs>
+    <pattern id="ht1" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.05" fill="#0a0a0a"/>
+    </pattern>
+    <linearGradient id="fade1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.85" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="mfade1">
+      <rect width="96" height="96" fill="url(#fade1)"/>
+    </mask>
+  </defs>
+  <rect width="96" height="96" rx="22" fill="#f5f4f2"/>
+  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#e7e5e2"/>
+  <g mask="url(#mfade1)">
+    <rect x="40" y="40" width="56" height="56" rx="22" fill="url(#ht1)" opacity="0.14"/>
+  </g>
+  <text x="16" y="52" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#171717">01</text>
+  <rect x="17" y="62" width="18" height="3" rx="1.5" fill="#7c3aed"/>
+</svg>

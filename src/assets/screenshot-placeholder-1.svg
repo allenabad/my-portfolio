@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 380" width="180" height="380">
+  <!-- Placeholder app screenshot 01 — replace with a real screenshot -->
+  <defs>
+    <pattern id="ht-s1" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#0a0a0a"/>
+    </pattern>
+    <linearGradient id="fade-s1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.8" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="mfade-s1">
+      <rect width="180" height="380" fill="url(#fade-s1)"/>
+    </mask>
+  </defs>
+  <rect width="180" height="380" rx="20" fill="#f5f4f2"/>
+  <rect x="0.5" y="0.5" width="179" height="379" rx="19.5" fill="none" stroke="#e7e5e2"/>
+
+  <!-- status bar / title row -->
+  <rect x="20" y="24" width="46" height="6" rx="3" fill="#171717"/>
+  <rect x="20" y="38" width="80" height="4" rx="2" fill="#a3a3a3"/>
+
+  <!-- card rows -->
+  <rect x="20" y="68" width="140" height="40" rx="8" fill="#ffffff" stroke="#e7e5e2"/>
+  <rect x="20" y="118" width="140" height="40" rx="8" fill="#ffffff" stroke="#e7e5e2"/>
+  <rect x="20" y="168" width="140" height="40" rx="8" fill="#ffffff" stroke="#e7e5e2"/>
+  <rect x="20" y="218" width="140" height="40" rx="8" fill="#ffffff" stroke="#e7e5e2"/>
+
+  <!-- accent pill -->
+  <rect x="20" y="288" width="60" height="22" rx="11" fill="#7c3aed"/>
+
+  <!-- halftone fade overlay -->
+  <g mask="url(#mfade-s1)">
+    <rect x="60" y="220" width="160" height="200" rx="40" fill="url(#ht-s1)" opacity="0.12"/>
+  </g>
+
+  <!-- corner label -->
+  <text x="20" y="362" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#a3a3a3" letter-spacing="1.5">SCREENSHOT · 01</text>
+</svg>
