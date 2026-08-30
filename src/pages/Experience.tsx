@@ -1,7 +1,19 @@
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
 export function ExperiencePage() {
+  const navigate = useNavigate();
   return (
-    <>
+    <section className="py-14">
       <header className="mb-12">
+        <button
+          onClick={() => navigate(-1)}
+          className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-gray-400 transition-colors hover:text-accent active:opacity-60 mb-6"
+          type="button"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" strokeWidth={2.5} />
+          back
+        </button>
         <h1 className="font-serif text-4xl leading-none tracking-tight">experience</h1>
       </header>
 
@@ -100,7 +112,7 @@ export function ExperiencePage() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

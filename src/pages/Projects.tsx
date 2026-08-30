@@ -1,4 +1,5 @@
-import { ExternalLink, Smartphone, Monitor } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { ExternalLink, Smartphone, Monitor, ArrowLeft } from "lucide-react";
 import { projects, type Project } from "../data/projects";
 
 function ProjectDetail({ project, index }: { readonly project: Project; readonly index: number }) {
@@ -208,9 +209,18 @@ function ProjectDetail({ project, index }: { readonly project: Project; readonly
 }
 
 export function ProjectsPage() {
+  const navigate = useNavigate();
   return (
     <section className="py-14">
       <header className="mb-12">
+        <button
+          onClick={() => navigate(-1)}
+          className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-gray-400 transition-colors hover:text-accent active:opacity-60 mb-6"
+          type="button"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" strokeWidth={2.5} />
+          back
+        </button>
         <h1 className="font-serif text-4xl leading-none tracking-tight">projects</h1>
         <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-gray-600">
           Selected work across mobile, web, and enterprise platforms.
