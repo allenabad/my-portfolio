@@ -209,7 +209,7 @@ function ProjectDetail({ project, index }: { readonly project: Project; readonly
 
 export function ProjectsPage() {
   return (
-    <section id="projects" className="py-14">
+    <section className="py-14">
       <header className="mb-12">
         <h1 className="font-serif text-4xl leading-none tracking-tight">projects</h1>
         <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-gray-600">
