@@ -294,7 +294,7 @@ export function Certifications() {
     setOpenIndex((i) => (i !== null && i < certifications.length - 1 ? i + 1 : certifications.length - 1));
 
   return (
-    <section id="certifications" className="py-14">
+    <section id="certifications-deck" className="py-14">
       <SectionHeader index="03" title="certifications" />
 
       {/* Grid */}

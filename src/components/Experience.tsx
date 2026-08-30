@@ -34,7 +34,7 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-14">
+    <section id="experience-deck" className="py-14">
       <SectionHeader
         index="02"
         title="experience"
@@ -69,7 +69,7 @@ export function Experience() {
         ))}
       </div>
 
-      <div id="stack" className="mt-7 scroll-mt-8">
+      <div id="stack-deck" className="mt-7 scroll-mt-8">
         <h3 className="mb-4 font-mono text-[11px] uppercase tracking-wider text-gray-400">
           Stack
         </h3>

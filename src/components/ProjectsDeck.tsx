@@ -54,7 +54,7 @@ function ScreenshotFrame({
 
 export function ProjectsDeck() {
   return (
-    <section id="projects" className="py-14">
+    <section id="projects-deck" className="py-14">
       <SectionHeader
         index="01"
         title="projects"

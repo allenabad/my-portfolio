@@ -22,10 +22,10 @@ type SidebarLink = {
 };
 
 const navLinks: SidebarLink[] = [
-  { label: "Projects", to: "#projects", icon: <FolderGit2 /> },
-  { label: "Experience", to: "#experience", icon: <Briefcase /> },
-  { label: "Stack", to: "#stack", icon: <Layers /> },
-  { label: "Certifications", to: "#certifications", icon: <Award /> },
+  { label: "Projects", to: "#projects-deck", icon: <FolderGit2 /> },
+  { label: "Experience", to: "#experience-deck", icon: <Briefcase /> },
+  { label: "Stack", to: "#stack-deck", icon: <Layers /> },
+  { label: "Certifications", to: "#certifications-deck", icon: <Award /> },
 ];
 
 function scrollToSection(to: string) {
