@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { SectionHeader } from "./SectionHeader";
 import { ArrowLeft } from "lucide-react";
 import { projects } from "../data/projects";
@@ -58,13 +59,13 @@ export function ProjectsDeck() {
         index="01"
         title="projects"
         action={
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider text-gray-500 transition-colors hover:text-accent active:opacity-60"
           >
             all projects
             <ArrowLeft className="h-3 w-3 -rotate-180" strokeWidth={2} />
-          </a>
+          </Link>
         }
       />
 

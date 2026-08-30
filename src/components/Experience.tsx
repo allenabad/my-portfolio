@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 
@@ -38,13 +39,13 @@ export function Experience() {
         index="02"
         title="experience"
         action={
-          <a
-            href="/experience"
+          <Link
+            to="/experience"
             className="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider text-gray-500 transition-colors hover:text-accent active:opacity-60"
           >
             full history
             <ArrowRight className="h-3 w-3" strokeWidth={2} />
-          </a>
+          </Link>
         }
       />
 

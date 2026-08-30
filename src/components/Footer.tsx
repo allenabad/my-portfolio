@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Footer() {
   return (
     <footer className="relative z-10 lg:pl-56">
@@ -6,12 +8,12 @@ export function Footer() {
         <p className="font-mono text-[11px] text-gray-400">
           © 2026 Allen Abad
         </p>
-        <a
-          href="/"
+        <Link
+          to="/"
           className="font-mono text-[11px] text-gray-400 hover:text-accent active:opacity-60"
         >
           ← back to site
-        </a>
+        </Link>
         </div>
       </div>
     </footer>
