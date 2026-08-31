@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import asIcon from "../assets/ascensoft-icon.png";
+import hciIcon from "../assets/hacktiv-icon.png";
+import tupIcon from "../assets/tup-icon.png";
 
 export function ExperiencePage() {
   const navigate = useNavigate();
@@ -27,7 +30,13 @@ export function ExperiencePage() {
         <div className="relative flex gap-4 sm:gap-5">
           <div className="flex flex-col items-center">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white font-serif text-[13px] italic text-ink">
-              AS
+              <img
+                src={asIcon}
+                alt="Ascensoft Inc. logo"
+                aria-hidden="true"
+                className="h-14 w-14 shrink-0 select-none rounded-xl transition-transform duration-300 motion-safe:group-hover:scale-[1.06]"
+                draggable={false}
+              />
             </div>
             <div className="mt-2 w-px flex-1 bg-gray-200"></div>
           </div>
@@ -60,7 +69,13 @@ export function ExperiencePage() {
         <div className="relative flex gap-4 sm:gap-5">
           <div className="flex flex-col items-center">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white font-serif text-[13px] italic text-ink">
-              HC
+              <img
+                src={hciIcon}
+                alt="Hacktiv Collab Inc. logo"
+                aria-hidden="true"
+                className="h-10 w-10 shrink-0 select-none rounded-xl transition-transform duration-300 motion-safe:group-hover:scale-[1.06]"
+                draggable={false}
+              />
             </div>
           </div>
           <div className="flex-1 pb-4">
@@ -96,7 +111,13 @@ export function ExperiencePage() {
 
         <div className="mt-5 flex gap-4 sm:gap-5">
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white font-serif text-[13px] italic text-ink">
-            TUP
+            <img
+                src={tupIcon}
+                alt="Technological University of the Philippines logo"
+                aria-hidden="true"
+                className="h-10 w-10 shrink-0 select-none rounded-xl transition-transform duration-300 motion-safe:group-hover:scale-[1.06]"
+                draggable={false}
+              />
           </div>
           <div className="flex-1">
             <h3 className="text-[15px] font-medium text-ink">Technological University of the Philippines</h3>

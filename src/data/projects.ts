@@ -1,12 +1,17 @@
 import icon1 from "../assets/Procter_&_Gamble_logo.svg";
 import icon2 from "../assets/qoomita-logo.png";
 import icon3 from "../assets/project-placeholder-3.svg";
+import icon4 from "../assets/project-placeholder-1.svg";
 import logistic1 from "../assets/logistics-1.png";
 import logistic2 from "../assets/logistics-2.jpg";
 import ledger1 from "../assets/ledger-sc1.jpg";
 import ledger2 from "../assets/ledger-sc2.jpg";
 import business1 from "../assets/qoomita-1.png"
 import business2 from "../assets/qoomita-2.png"
+import pharmacy1 from "../assets/pharmacy-1.png"
+import pharmacy2 from "../assets/pharmacy-2.png"
+import dental1 from "../assets/project-placeholder-1.svg"
+import dental2 from "../assets/project-placeholder-2.svg"
 
 export type ProjectScreenshot = {
   src: string;
@@ -56,8 +61,6 @@ export const projects: Project[] = [
       "React Native Elements",
       "React Native Paper",
       "AG Grid (web)",
-      "Offline-First",
-      "Background Tasks",
     ],
     icon: icon1,
     kind: "mobile",
@@ -187,6 +190,117 @@ export const projects: Project[] = [
       "Zero data loss across migrations; offline writes merge cleanly on reconnect",
       "Informed UX patterns for bill reminders and savings goals later used in client projects",
       "Achieves sub-2s interactive load on cold start via code splitting and minimal auth bundle",
+    ],
+  },
+  {
+    id: "pharmacy-pos",
+    name: "Pharmacy Management System with POS",
+    description:
+      "A web-based pharmacy management system with integrated Point of Sale (POS), inventory tracking, and sales analytics.",
+    longDescription:
+      "A comprehensive pharmacy management system built as a thesis project during college. The system features a full-featured Point of Sale (POS) module for processing sales transactions, inventory management with stock tracking and expiration monitoring, category and product management, sales reporting with charts, user management with role-based access, and a dashboard for business insights. Built with React (CRA), Redux Toolkit for state management, React Router for navigation, Chart.js for analytics visualization, and a Node.js/Express backend with MongoDB.",
+    year: "2022",
+    role: "Frontend Developer",
+    tags: [
+      "React",
+      "Redux Toolkit",
+      "React Router",
+      "Chart.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "JWT Auth",
+    ],
+    icon: icon4,
+    kind: "web",
+    badge: "Thesis Project",
+    screenshots: [
+      { src: pharmacy1, alt: "Pharmacy POS — Point of Sale interface" },
+      { src: pharmacy2, alt: "Pharmacy POS — Dashboard with sales analytics" },
+    ],
+    context: "College Thesis Project · TUP Manila",
+    challenges: [
+      "Building a responsive POS interface with real-time cart calculations and stock validation",
+      "Implementing role-based access control (admin, pharmacist, cashier) with JWT authentication",
+      "Managing complex product state with Redux Toolkit (cart, inventory, sales history)",
+      "Creating sales analytics dashboard with Chart.js visualizations",
+      "Handling product expiration tracking and low-stock alerts",
+    ],
+    solutions: [
+      "React Select for searchable product dropdown with stock-aware quantity validation",
+      "Redux Toolkit slices for modular state management (products, sales, users, categories)",
+      "Headless UI Dialog/Transition for accessible modal interactions (quantity editing, receipts)",
+      "React Hot Toast for user feedback on actions and validation errors",
+      "Tailwind CSS for rapid, responsive UI development",
+      "Express async handler + centralized error handling for clean backend code",
+      "Mongoose models with timestamps for audit trails on sales and inventory changes",
+    ],
+    outcomes: [
+      "Complete POS workflow: product selection → quantity validation → cart → payment → receipt",
+      "Real-time inventory deduction on sale with stock availability checks",
+      "Sales reports with date filtering and visual charts (bar charts for daily/weekly/monthly)",
+      "Expired products tracking page with automated flagging",
+      "Multi-user system with role-based permissions (admin manages users/products, cashier processes sales)",
+      "Deployed and presented as a working thesis prototype",
+    ],
+  },
+  {
+    id: "dental-appointment",
+    name: "Dental Appointment Scheduling System with Inventory",
+    description:
+      "A web-based dental clinic management system with appointment scheduling, patient management, and dental supplies inventory tracking.",
+    longDescription:
+      "A comprehensive dental clinic management system built as a freelance project during college. The system features a public landing page with service showcase, patient registration and authentication, appointment booking with calendar view, dentist dashboard for schedule management, admin panel for patient/appointment/supplies management, and inventory tracking for dental supplies. Built with React + Vite, React Router for navigation, Tailwind CSS for styling, React Datepicker for appointment scheduling, React Data Table Component for data grids, and a Node.js/Express backend with MySQL database and JWT authentication. The frontend was developed independently while a colleague handled the backend.",
+    year: "2022",
+    role: "Frontend Developer (Freelance)",
+    tags: [
+      "React",
+      "Vite",
+      "React Router",
+      "Tailwind CSS",
+      "React Datepicker",
+      "React Data Table Component",
+      "React Icons",
+      "Axios",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "JWT Auth",
+    ],
+    icon: dental1,
+    kind: "web",
+    badge: "Freelance",
+    screenshots: [
+      { src: dental1, alt: "Dental System — Landing page with services" },
+      { src: dental2, alt: "Dental System — Appointment booking calendar" },
+    ],
+    context: "Freelance College Project · TUP Manila",
+    challenges: [
+      "Building a public-facing landing page with service showcase and responsive design",
+      "Implementing dual authentication flows (patient vs dentist) with role-based routing",
+      "Creating an intuitive appointment booking experience with calendar and time-slot selection",
+      "Building dentist dashboard with schedule visualization and patient management",
+      "Developing admin panel with data tables for patients, appointments, and supplies inventory",
+      "Integrating with REST API for all CRUD operations and real-time availability checks",
+    ],
+    solutions: [
+      "React Router v6 with protected routes for patient/dentist/admin role separation",
+      "React Datepicker for interactive appointment scheduling with disabled past dates",
+      "React Data Table Component for sortable, paginated admin tables (patients, appointments, supplies)",
+      "AuthContext for global auth state management with token persistence",
+      "Tailwind CSS for rapid, consistent UI across landing page, dashboards, and forms",
+      "Axios interceptors for automatic JWT attachment and error handling",
+      "Responsive design breakpoints for mobile appointment booking",
+    ],
+    outcomes: [
+      "Complete patient journey: landing page → registration → login → book appointment → view history",
+      "Dentist dashboard with calendar view, pending/confirmed appointments, and patient profiles",
+      "Admin panel with full CRUD for patients, appointments, and dental supplies inventory",
+      "Inventory tracking for dental supplies with low-stock visibility",
+      "JWT-based authentication with httpOnly cookies for secure session management",
+      "Delivered as a working system for a dental clinic client",
     ],
   },
 ];

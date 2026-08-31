@@ -19,12 +19,12 @@ function ScreenshotFrame({
           <span className="h-1.5 w-1.5 rounded-full bg-gray-300" />
           <span className="ml-1.5 h-1.5 flex-1 rounded-full bg-gray-100" />
         </div>
-        <div className="aspect-[16/10] w-full">
+        <div className="aspect-[16/10] w-full bg-gray-100">
           <img
             src={shot.src}
             alt={shot.alt}
             loading="lazy"
-            className="h-full w-full object-cover object-top"
+            className="h-full w-full object-contain object-center"
             draggable={false}
           />
         </div>
@@ -38,12 +38,12 @@ function ScreenshotFrame({
         <div className="flex justify-center bg-gray-50 pt-1">
           <span className="h-1 w-8 rounded-full bg-gray-300" />
         </div>
-        <div className="aspect-[9/19] w-full max-w-[280px] mx-auto">
+        <div className="aspect-[9/19] w-full max-w-[280px] mx-auto bg-gray-100">
           <img
             src={shot.src}
             alt={shot.alt}
             loading="lazy"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain object-center"
             draggable={false}
           />
         </div>
