@@ -219,7 +219,7 @@ function CertificateLightbox({
       {/* Certificate Content */}
       <div className="relative w-full max-w-3xl mx-6 my-12 flex flex-col">
         {/* Image — full size, contained */}
-        <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 bg-gray-900">
+        <div className="relative aspect-[3/2] overflow-hidden rounded-xl border border-white/10 bg-gray-900">
           <img
             src={cert.image}
             alt={`${cert.name} certificate — full view`}

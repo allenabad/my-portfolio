@@ -19,7 +19,7 @@ function ScreenshotFrame({
           <span className="h-1.5 w-1.5 rounded-full bg-gray-300" />
           <span className="ml-1.5 h-1.5 flex-1 rounded-full bg-gray-100" />
         </div>
-        <div className="aspect-[16/10] w-full bg-gray-100">
+        <div className="aspect-[15/8] w-full bg-gray-100">
           <img
             src={shot.src}
             alt={shot.alt}
