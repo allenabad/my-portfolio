@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   Award,
   Briefcase,
@@ -39,7 +39,8 @@ function scrollToSection(to: string) {
 function handleNavClick(
   e: React.MouseEvent<HTMLAnchorElement>,
   to: string,
-  location: ReturnType<typeof useLocation>
+  location: ReturnType<typeof useLocation>,
+  navigate: ReturnType<typeof useNavigate>
 ) {
   e.preventDefault();
   const isHome = location.pathname === "/";
@@ -48,10 +49,8 @@ function handleNavClick(
     // On home page: just scroll to section
     scrollToSection(to);
   } else {
-    // On other pages: navigate to home page with hash fragment
-    // HashRouter format: /#/section-id (the #/ is the router, section-id is the fragment)
-    // This navigates to home route (/) and browser scrolls to element with id="section-id"
-    window.location.href = `/#/${to.slice(1)}`;
+    // On other pages: navigate to home with state, Home page will read hash and scroll
+    navigate("/", { state: { scrollTo: to } });
   }
 }
 
@@ -74,6 +73,7 @@ export function Sidebar() {
   const closeTimer = useRef<number | undefined>(undefined);
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const openNav = () => {
     window.clearTimeout(closeTimer.current);
@@ -153,7 +153,7 @@ export function Sidebar() {
             <a
               key={link.to}
               href={link.to}
-              onClick={(e) => handleNavClick(e, link.to, location)}
+              onClick={(e) => handleNavClick(e, link.to, location, navigate)}
               className="inline-flex w-fit items-center gap-2.5 text-gray-500 transition-colors hover:text-accent active:opacity-60 motion-safe:hover:translate-x-0.5"
             >
               {link.icon && (
@@ -256,7 +256,7 @@ export function Sidebar() {
                   e.preventDefault();
                   closeNav();
                   // For mobile: close menu first, then navigate
-                  setTimeout(() => handleNavClick(e, link.to, location), 330);
+                  setTimeout(() => handleNavClick(e, link.to, location, navigate), 330);
                 }}
                 className="inline-flex w-fit items-center gap-3 text-gray-700 hover:text-accent active:opacity-60 motion-safe:hover:translate-x-0.5"
               >

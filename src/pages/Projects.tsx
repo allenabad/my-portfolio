@@ -1,10 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ExternalLink, Smartphone, Monitor, ArrowLeft } from "lucide-react";
 import { projects, type Project } from "../data/projects";
 
 function ProjectDetail({ project, index }: { readonly project: Project; readonly index: number }) {
   return (
     <article
+      id={project.id}
       className="reveal space-y-10"
       style={{ animationDelay: `${(index + 1) * 80}ms` }}
     >
@@ -87,7 +89,7 @@ function ProjectDetail({ project, index }: { readonly project: Project; readonly
                       <span className="h-1.5 w-1.5 rounded-full bg-gray-300" />
                       <span className="ml-1.5 h-1.5 flex-1 rounded-full bg-gray-100" />
                     </div>
-                    <div className="aspect-[16/10] w-full bg-gray-100">
+                    <div className="aspect-[15/8] w-full bg-gray-100">
                       <img
                         src={shot.src}
                         alt={shot.alt}
@@ -103,7 +105,7 @@ function ProjectDetail({ project, index }: { readonly project: Project; readonly
                       <div className="flex justify-center bg-gray-50 pt-1">
                         <span className="h-1 w-8 rounded-full bg-gray-300" />
                       </div>
-                      <div className="aspect-[9/19] w-full max-w-[320px] mx-auto bg-gray-100">
+                      <div className="aspect-[1/2] w-full max-w-[320px] mx-auto bg-gray-100">
                         <img
                           src={shot.src}
                           alt={shot.alt}
@@ -210,6 +212,21 @@ function ProjectDetail({ project, index }: { readonly project: Project; readonly
 
 export function ProjectsPage() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Handle scroll to project from ProjectsDeck
+  useEffect(() => {
+    const state = location.state as { scrollToProject?: string } | null;
+    if (state?.scrollToProject) {
+      const projectId = state.scrollToProject;
+      const el = document.getElementById(projectId);
+      if (el) {
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        el.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <section className="py-14">
       <header className="mb-12">

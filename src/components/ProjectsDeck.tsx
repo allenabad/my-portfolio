@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SectionHeader } from "./SectionHeader";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { projects } from "../data/projects";
 
 function ScreenshotFrame({
@@ -38,7 +39,7 @@ function ScreenshotFrame({
         <div className="flex justify-center bg-gray-50 pt-1">
           <span className="h-1 w-8 rounded-full bg-gray-300" />
         </div>
-        <div className="aspect-[9/19] w-full max-w-[280px] mx-auto bg-gray-100">
+        <div className="aspect-[1/2] w-full max-w-[280px] mx-auto bg-gray-100">
           <img
             src={shot.src}
             alt={shot.alt}
@@ -53,6 +54,13 @@ function ScreenshotFrame({
 }
 
 export function ProjectsDeck() {
+  const navigate = useNavigate();
+
+  const handleViewCaseStudy = (projectId: string) => {
+    // Navigate to projects page with state to scroll to the project
+    navigate("/projects", { state: { scrollToProject: projectId } });
+  };
+
   return (
     <section id="projects-deck" className="py-14">
       <SectionHeader
@@ -143,6 +151,14 @@ export function ProjectsDeck() {
               <p className="font-mono text-[10px] uppercase tracking-wider text-gray-300">
                 {project.context}
               </p>
+              <button
+                type="button"
+                onClick={() => handleViewCaseStudy(project.id)}
+                className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-gray-500 transition-colors hover:text-accent active:opacity-60"
+              >
+                View Case Study
+                <ArrowRight className="h-3 w-3" strokeWidth={2} />
+              </button>
             </div>
           </article>
         ))}
